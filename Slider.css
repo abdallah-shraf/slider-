@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Tahoma , Arial;
+}
+img{
+    width: 600px;
+    height: 400px;
+}
+.containar{
+    margin: 10px auto;
+    width: 800px;
+    height: 450px;
+    position: relative;
+}
+
+.containar img{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+}
+.containar img.active{
+    opacity: 1;
+}
+
+.containar .number  {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+
+.controls{
+    width: 1000px;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.controls .prev,
+.controls .next{
+    background-color: #009688;
+    color: #fff;
+    font-size: 16px;
+  
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5%;
+    padding: 5px;
+    margin-left: 22%;
+    user-select: none;
+    width: 20%;
+}
+
+.controls .prev{
+    float: left;
+}
+
+
+.controls .next{
+    float: right;
+}
+
+.controls .prev.disabled,
+.controls .next.disabled{
+    background-color: rgba(0, 150, 135, 0.5);
+    cursor: no-drop;
+}
+
+
+
+
+.controls .indic ul{
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+
+.controls .indic ul li {
+    display: inline-block;
+    background-color: #f6f6f6;
+    color: #333333;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    margin: 0 2px;
+    
+    line-height: 28px;
+    cursor: pointer;
+}
+
+
+.controls .indic ul li.active
+{
+    background-color: #009688;
+    color: #ffffff;
+}
+
